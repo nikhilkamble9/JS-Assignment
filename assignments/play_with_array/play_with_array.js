@@ -14,6 +14,7 @@ function getEven(arr) {
     }
   }
    return res
+//    return ans.filter((ele)=>ele%2===0)
 }
 
 function multiplyByN(arr, n) {
@@ -31,6 +32,7 @@ function multiplyByN(arr, n) {
        res.push(mul);
    }
    return res
+   //    return arr.map((ele)=>ele*n)
 }
 
 function removeNthElement(arr, n) {
