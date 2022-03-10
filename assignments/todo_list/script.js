@@ -4,10 +4,10 @@ document.querySelector('.addbutton').onclick = function(){
     if(input.length === 0){
         alert('please enter the value')
     }else{
-        document.querySelector('.todos').innerHTML += `<p key=${count}><span class="tasks">${input}</span></p>`;
+        document.querySelector('.todos').innerHTML += `<p key=${count}>${input}</p>`;
         count ++
     }
-    let remover = document.querySelectorAll('.tasks')
+    let remover = document.querySelectorAll('.todos>p')
     for(let i=0; i< remover.length; i++){
         remover[i].onclick = function(){
             this.remove();
