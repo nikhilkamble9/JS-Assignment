@@ -3,11 +3,14 @@
         <title>Todo List</title>
     </head>
     <body>
-        <div>
-            <input type='text' name='todo_input'>
-            <button type='submit'>Add Todo</button>
-            <div class='todos'></div>
+        <div class="input-div">
+            <input type='text' name='todo_input' class="input">
+            <button class="addbutton" type='submit'>Add Todo</button>
+            <div class='todos'>
+                <!-- Data come from user input -->
+            </div>
         </div>
+        <div class="button-remove"><a class="remove-button" onclick="removeAll()">Remove All</a></div>
     </body>
     <script src='./script.js'></script>
 </html>
