@@ -1,5 +1,5 @@
 describe('todo_list', () => {
-    test('Check addTodo able add todo to todoList', () => {
+    test('C t', () => {
         document.body.innerHTML = `
             <div>
                 <input type='text' name='todo_input'>
