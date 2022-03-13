@@ -1,12 +1,43 @@
 <html>
     <head>
         <title>Todo List</title>
+        <style>
+            .todos{
+                display: flex;
+            }
+            .completed{
+                display: inline-block;
+                width: 50%;
+                margin-top: 0px;
+            }
+            .pending{
+                display: inline-block;
+                width: 49%;
+            }
+            span.colums {
+                display: inline-block;
+                width: 49%;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+        </style>
     </head>
     <body>
         <div class="input-div">
             <input type='text' name='todo_input' class="input">
             <button class="addbutton" type='submit'>Add Todo</button>
+            <header class="status">
+                <span class="colums">
+                    completed
+                </span>
+                <span class="colums">
+                    pending
+                </span>
+            </header>
             <div class='todos'>
+                <div class="completed"></div>
+                <div class="pending"></div>
                 <!-- Data come from user input -->
             </div>
         </div>

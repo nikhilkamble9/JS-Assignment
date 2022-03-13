@@ -17,24 +17,21 @@ document.querySelector('.addbutton').onclick = function(){
 function removeAll(){
     document.querySelector('.todos').innerHTML = "";
 }
-// const newTodoInput = document.querySelector('input');
-// const addTodoBtn = document.querySelector('button');
-// const todolist = document.querySelector('div.todos');
-// let count = 0;
-// let removeCount = 0;
-// addTodoBtn.onclick = function(){
-//     let input = newTodoInput.value;
-//     if(input.length === 0) {
-//     alert("Please enter a task");
-//     } else {
-//     todolist.innerHTML +=`<p key="${count}">${input}</p>`
-//     count++;
-//     let remover = document.querySelectorAll(`p[key=${str(removeCount)}]`).value
-//     remover.onclick = function(){
-//         for(let i=0; i<remover.length; i++){
-//             this.remove();
-//             removeCount++;
-//         }
-//     };
-//     }
-// }
+async function apitodo(){
+    let res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    let data = await res.json();
+    let output = '';
+    let pending = '';
+    data.forEach(function(todo, index) {
+        if(todo.completed===true){
+            output +=`<p key=${index}>${todo.title}</p>`;
+            document.querySelector('.completed').innerHTML = output;
+        }
+        else if(todo.completed===false){
+            pending +=`<p key=${index}>${todo.title}</p>`;
+            document.querySelector('.pending').innerHTML = pending;
+        }
+    });
+    
+}
+apitodo();
